@@ -1,0 +1,58 @@
+@use '../../theme.scss' as variables;
+
+.banner {
+    width: 100%;
+    height: 390px;
+    background-image:
+        linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%),
+        url('../../assets/banner.jpg');
+    background-size: cover;
+    background-position: 50% 20%;
+
+    .banner-content {
+        max-width: 1280px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h1 {
+            font-family: variables.$font;
+            font-size: 48px;
+            color: variables.$branco;
+        }
+
+        h2 {
+            font-family: variables.$font;
+            font-size: 32px;
+            margin: 1rem 0 2rem 0;
+            color: variables.$branco;
+
+            span {
+                color: variables.$amarelo;
+            }
+        }
+
+        button {
+            width: 206px;
+            height: 50px;
+            border-radius: 5px;
+            padding-top: 7px;
+            padding-right: 49px;
+            padding-bottom: 7px;
+            padding-left: 49px;
+            border: none;
+            background-color: variables.$amarelo;
+            font-family: variables.$font;
+            color: #000;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 16px;
+            line-height: 100%;
+
+        }
+    }
+}
