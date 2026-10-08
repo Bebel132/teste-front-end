@@ -7,7 +7,7 @@ const Brands = () => {
             <div className="brands">
                 {[...Array(5)].map((_, index) => (
                     <div key={index} className="brand">
-                        <img src="/src/assets/header/Logo.svg" alt="" />
+                        <img src="/src/assets/Logo.svg" alt="" />
                     </div>
                 ))}
             </div>

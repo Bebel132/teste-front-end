@@ -18,7 +18,7 @@ const Header = () => {
                 </li>
             </ul>
             <div className="header-content">
-                <a href="/" aria-label="Página inicial"><img src="/src/assets/header/Logo.svg" alt="Logo Econverse" /></a>
+                <a href="/" aria-label="Página inicial"><img src="/src/assets/Logo.svg" alt="Logo Econverse" /></a>
                 <div>
                     <form role="search">
                         <input id="search" type="search" aria-label="Buscar produtos" placeholder="O que você está buscando?" />

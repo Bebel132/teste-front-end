@@ -1,0 +1,78 @@
+@use '../../theme.scss' as variables;
+
+.footer {
+    font-family: variables.$font;
+    max-width: 1280px;
+    width: 100%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-text {
+        width: 354px;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 164px;
+        }
+
+        p {
+            margin: 2rem 0 2.5rem 0;
+        }
+
+        .icons {
+            display: flex;
+            gap: 1rem;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .linha {
+        width: 1px;
+        height: 198px;
+        border: 1px solid #2828282E
+    }
+
+    .footer-links {
+        width: 631px;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            p {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 16px;
+                letter-spacing: 0%;
+                color: #222222B5;
+            }
+
+            a {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0%;
+                color: #222222B5;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.copyright {
+    font-family: variables.$font;
+    height: 46.84210205078125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
