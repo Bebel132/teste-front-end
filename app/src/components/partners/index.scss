@@ -1,0 +1,61 @@
+@use '../../theme.scss' as variables;
+
+.partners {
+    max-width: 1280px;
+    width: 100%;
+    margin: 6rem auto;
+    font-family: variables.$font;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    .partner {
+        background: 
+            linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 97.04%), 
+            url(/src/assets/partners.jpg);
+        background-size: 130%;
+        background-position: 38% 28%;
+        border-radius: 20px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        color: variables.$branco;
+        gap: 1.3rem;
+        padding: 3rem;
+
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0%;
+        }
+
+        button {
+            width: 144.69337463378906px;
+            height: 48px;
+            border-radius: 6px;
+            border: none;
+            background-color: variables.$amarelo;
+            font-family: variables.$font;
+            color: #000;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 8%;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+    }
+}

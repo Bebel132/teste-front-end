@@ -1,0 +1,38 @@
+@use '../../theme.scss' as variables;
+
+.brands-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 6rem auto;
+    font-family: variables.$font;
+    
+    h1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: variables.$azul;
+    }
+
+    .brands {
+        max-width: 1280px;
+        width: 100%;
+        font-family: variables.$font;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        width: 211px;
+        height: 211px;
+        border-radius: 100%;
+        box-shadow: 0px 7px 20px 0px #00000021;
+        display: flex;
+        margin: 21px;
+        justify-content: center;
+        align-items: center;
+    }
+}
