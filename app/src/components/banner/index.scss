@@ -3,11 +3,12 @@
 .banner {
     width: 100%;
     height: 390px;
-    background-image:
-        linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%),
-        url('../../assets/banner.jpg');
-    background-size: cover;
-    background-position: 50% 20%;
+    background-image: 
+        linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #000000 94.04%), 
+        url(/src/assets/banner.jpg);
+    background-size: 120% auto;
+    background-repeat: no-repeat;
+    background-position: 0% 34%;
 
     .banner-content {
         max-width: 1280px;
@@ -23,15 +24,17 @@
             font-family: variables.$font;
             font-size: 48px;
             color: variables.$branco;
+            max-width: 547px;
+            width: 100%;
         }
 
-        h2 {
+        p {
             font-family: variables.$font;
             font-size: 32px;
             margin: 1rem 0 2rem 0;
             color: variables.$branco;
 
-            span {
+            strong {
                 color: variables.$amarelo;
             }
         }

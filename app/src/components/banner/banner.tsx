@@ -2,13 +2,13 @@ import './index.scss'
 
 const Banner = () => {
     return (
-        <div className="banner">
+        <section className="banner" aria-labelledby="banner-title">
             <div className="banner-content">
-                <h1>Venha conhecer nossas<br /> promoções</h1>
-                <h2><span>50% off</span> nos produtos</h2>
-                <button>Ver produto</button>
+                <h1 id="banner-title">Venha conhecer nossas promoções</h1>
+                <p><strong>50% off</strong> nos produtos</p>
+                <button type="button">Ver produto</button>
             </div>
-        </div>
+        </section>
     )
 };
 
