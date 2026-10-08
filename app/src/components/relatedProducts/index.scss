@@ -1,6 +1,6 @@
 @use '../../theme.scss' as variables;
 
-main {
+.related-products {
     max-width: 1280px;
     width: 100%;
     margin: 6rem auto;
@@ -13,7 +13,7 @@ main {
         align-items: center;
         justify-content: center;
 
-        h1 {
+        h2 {
             font-weight: 700;
             font-size: 30px;
             line-height: 100%;
@@ -29,30 +29,49 @@ main {
         }
     }
 
+    #ver-todos {
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-decoration: none;
+        color: variables.$preto;
+    }
+
     nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem 0;
-
-        button {
-            width: 214.1666717529297px;
-            height: 48px;
-            background-color: variables.$branco;
-            border: 1px solid #BDBDBD;
-            text-transform: uppercase;
-            font-weight: 400;
-            font-style: Regular;
-            font-size: 16px;
-            line-height: 16px;
-            cursor: pointer;
-
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+            list-style: none;
+        
+            li {
+                button {
+                    width: 214.1666717529297px;
+                    height: 48px;
+                    background-color: variables.$branco;
+                    border: 1px solid #BDBDBD;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    line-height: 16px;
+                    cursor: pointer;
+        
+                }
+        
+                .active {
+                    color: variables.$azul;
+                    font-weight: 700;
+                }
+            }
         }
 
-        .active {
-            color: variables.$azul;
-            font-weight: 700;
-        }
     }
 
     .carousel-wrapper {

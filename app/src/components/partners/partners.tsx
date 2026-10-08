@@ -2,18 +2,18 @@ import './index.scss';
 
 const Partners = () => {
     return (
-        <div className="partners">
+        <section className="partners">
             <div className="partner">
-                <h1>Parceiros</h1>
+                <h2>Parceiros</h2>
                 <p>Lorem ipsum dolor sit <br /> amet, consectetur</p>
-                <button>Confira</button>
+                <button type="button">Confira</button>
             </div>
             <div className="partner">
-                <h1>Parceiros</h1>
+                <h2>Parceiros</h2>
                 <p>Lorem ipsum dolor sit <br /> amet, consectetur</p>
-                <button>Confira</button>
+                <button type="button">Confira</button>
             </div>
-        </div>
+        </section>
     )
 };
 

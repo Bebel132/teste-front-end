@@ -33,10 +33,9 @@ const Categories = () => {
                     const isActive = category.name === activeCategory.name;
 
                     return (
-                        <li>
+                        <li key={category.name}>
                             <button 
                                 className={isActive ? 'active' : ''} 
-                                key={category.name}
                                 onClick={() => setActiveCategory(category)}
                                 aria-pressed={isActive}
                             >

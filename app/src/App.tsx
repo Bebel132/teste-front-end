@@ -8,26 +8,34 @@ import Partners from './components/partners/partners.tsx';
 import Brands from './components/brands/brands.tsx';
 import Newsletter from './components/newsletter/newsletter.tsx';
 import Footer from './components/footer/footer.tsx';
+import type IProduct from './interfaces/product.ts';
+import { useState } from 'react';
+import PopUp from './components/popup/popUp.tsx';
 
 function App() {
-  const queryClient = new QueryClient()
+  const [queryClient] = useState(() => new QueryClient())
+  const [selectedProduct, setSelectedProduct] = useState<IProduct | null>(null)
 
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
       <Banner />
-      <Categories />
+      <main>
+        <Categories />
 
-      <RelatedProducts />
-      <Partners />
+        <RelatedProducts withOptions={true} setSelectedProduct={setSelectedProduct} />
+        <Partners />
 
-      <RelatedProducts />
-      <Partners />
+        <RelatedProducts withOptions={false} setSelectedProduct={setSelectedProduct} />
+        <Partners />
 
-      <Brands />
-      <RelatedProducts />
+        <Brands />
+        <RelatedProducts withOptions={false} setSelectedProduct={setSelectedProduct} />
 
-      <Newsletter />
+        <Newsletter />
+      </main>
+      
+      <PopUp selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct} />
 
       <Footer />
     </QueryClientProvider>

@@ -1,6 +1,6 @@
 @use '../../theme.scss' as variables;
 
-.newsletter-container {
+section.newsletter-container {
     width: 100%;
     height: 162px;
     background-color: variables.$roxo;
@@ -21,7 +21,7 @@
             max-width: 522px;
             width: 100%;
 
-            h1 {
+            h2 {
                 font-weight: 600;
                 font-size: 32px;
                 line-height: 120%;
@@ -44,6 +44,7 @@
             width: 100%;
 
             .text-inputs {
+                border: none;
                 display: flex;
                 justify-content: space-between;
 

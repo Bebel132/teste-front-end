@@ -18,7 +18,7 @@
             width: 164px;
         }
 
-        p {
+        h2 {
             margin: 2rem 0 2.5rem 0;
         }
 
@@ -45,26 +45,32 @@
         justify-content: space-between;
 
         div {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            p {
+            h2 {
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 16px;
                 letter-spacing: 0%;
                 color: #222222B5;
+                margin-bottom: 20px;
             }
 
-            a {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 16px;
-                letter-spacing: 0%;
-                color: #222222B5;
-                text-decoration: none;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                list-style: none;
+                
+                a {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0%;
+                    color: #222222B5;
+                    text-decoration: none;
+                }
             }
+
+
         }
     }
 }
@@ -75,4 +81,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }

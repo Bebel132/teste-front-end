@@ -2,8 +2,8 @@ import './index.scss'
 
 const Brands = () => {
     return (
-        <div className="brands-container">
-            <h1>Navegue por marcas</h1>
+        <section className="brands-container">
+            <h2>Navegue por marcas</h2>
             <div className="brands">
                 {[...Array(5)].map((_, index) => (
                     <div key={index} className="brand">
@@ -11,7 +11,7 @@ const Brands = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 };
 
