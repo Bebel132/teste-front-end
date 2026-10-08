@@ -27,24 +27,31 @@ const Categories = () => {
     const [activeCategory, setActiveCategory] = useState<Category>(categories[0])
 
     return (
-        <div className="categories" aria-label="Categorias de produtos">
-            {categories.map((category) => (
-                <div 
-                    className={category.name === activeCategory.name ? 'active' : ''} 
-                    key={category.name} 
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => setActiveCategory(category)}
-                >
-                    <div>
-                        <img className="category-icon" src={category.icon} alt="" />
-                    </div>
-                    <span>
-                        {category.name}
-                    </span>
-                </div>
-            ))}
-        </div>
+        <nav className="categories" aria-label="Categorias de produtos">
+            <ul>
+                {categories.map((category) => {
+                    const isActive = category.name === activeCategory.name;
+
+                    return (
+                        <li>
+                            <button 
+                                className={isActive ? 'active' : ''} 
+                                key={category.name}
+                                onClick={() => setActiveCategory(category)}
+                                aria-pressed={isActive}
+                            >
+                                <div>
+                                    <img className="category-icon" src={category.icon} alt="" />
+                                </div>
+                                <span>
+                                    {category.name}
+                                </span>
+                            </button>
+                        </li>
+                    )
+                })}
+            </ul>
+        </nav>
     )
 };
 
