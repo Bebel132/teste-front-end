@@ -1,75 +1,114 @@
-# React + TypeScript + Vite
+# Teste Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação front-end desenvolvida com React, TypeScript, Vite e Sass.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- TypeScript
+- Vite
+- Sass
+- Axios
+- TanStack React Query
+- JSON Server
 
-## React Compiler
+## Pré-requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js instalado
+- npm instalado
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Entre na pasta do projeto:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd app
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+## Executando o projeto
+
+O projeto precisa de dois processos rodando simultaneamente: o servidor da API e o servidor do Vite.
+
+### 1. Inicie a API
+
+Em um terminal, execute:
+
+```bash
+npx json-server db.json
+```
+
+A API ficará disponível em:
+
+```text
+http://127.0.0.1:3000
+```
+
+Os produtos podem ser acessados em:
+
+```text
+http://127.0.0.1:3000/products
+```
+
+### 2. Inicie a aplicação
+
+Em outro terminal, dentro da pasta `app`, execute:
+
+```bash
+npm run dev
+```
+
+A aplicação ficará disponível no endereço exibido pelo Vite, normalmente:
+
+```text
+http://localhost:5173
+```
+
+## Scripts disponíveis
+
+Inicia o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Gera a versão de produção:
+
+```bash
+npm run build
+```
+
+Inicia o preview da versão de produção:
+
+```bash
+npm run preview
+```
+
+## Estrutura principal
+
+```text
+app/
+├── db.json
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── interfaces/
+│   ├── services/
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+```
+
+## Observações
+
+O front-end consome os produtos através do JSON Server. Por isso, mantenha os dois servidores ativos durante o desenvolvimento:
+
+- JSON Server: `http://127.0.0.1:3000`
+- Vite: normalmente `http://localhost:5173`
